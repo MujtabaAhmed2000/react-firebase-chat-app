@@ -9,6 +9,7 @@ const SendMessage = () => {
 
     const send = async () => {
         if (message.trim() !== "") {
+            setMessage("")
             const { uid, displayName } = auth.currentUser
 
             await addDoc(collection(db, "messages"), {
