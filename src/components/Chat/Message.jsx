@@ -16,9 +16,11 @@ const Message = ({ message }) => {
             <p>
                 {text}
             </p>
-            <p className="text-xs">
-                {new Date(createdAt?.seconds * 1000 + createdAt?.nanoseconds / 1000000).toLocaleTimeString()}
-            </p>
+            {createdAt && (
+                <p className="text-xs">
+                    {new Date(createdAt?.seconds * 1000 + createdAt?.nanoseconds / 1000000).toLocaleTimeString()}
+                </p>
+            )}
         </div>
     )
 }
