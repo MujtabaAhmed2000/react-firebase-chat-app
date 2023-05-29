@@ -34,6 +34,7 @@ const SendMessage = () => {
                         send()
                     }
                 }}
+                placeholder="Type here"
             />
             <button
                 className="h-full w-[10%] bg-slate-900 text-white font-semibold"
