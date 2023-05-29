@@ -8,8 +8,6 @@ const Message = ({ message }) => {
 
     let { name, text, uid, createdAt } = message
 
-    console.log(message)
-
     return (
         <div className={[uid === user.uid ? "text-right self-end" : "text-left self-start"] + " flex flex-col space-y-1 w-fit bg-white rounded-md py-2 px-6"}>
             <p className="text-sm">
