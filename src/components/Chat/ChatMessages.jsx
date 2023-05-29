@@ -16,6 +16,10 @@ const ChatMessages = () => {
     const scroll = useRef()
 
     useEffect(() => {
+        scroll.current.scrollIntoView({ behavior: "smooth" })
+    }, [messages])
+
+    useEffect(() => {
         const q = query(
             collection(db, "messages"),
             orderBy("createdAt"),
